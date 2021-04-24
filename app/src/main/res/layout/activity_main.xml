@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/explosion_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baby_changing_station"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
 
+    <View
+        android:id="@+id/animation_view"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/circle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/explosion_b"
+        app:layout_constraintEnd_toEndOf="@id/explosion_b"
+        app:layout_constraintStart_toStartOf="@id/explosion_b"
+        app:layout_constraintTop_toTopOf="@id/explosion_b" />
 </androidx.constraintlayout.widget.ConstraintLayout>
